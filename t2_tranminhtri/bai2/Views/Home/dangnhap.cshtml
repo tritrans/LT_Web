@@ -1,0 +1,187 @@
+﻿
+@{
+    ViewBag.Title = "dangnhap";
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+}
+
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title> View Đăng Nhập</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+        header {
+            background-color: #d6e3bc;
+            padding: 10px 0;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info p {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        nav {
+            background-color: #a2c373;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+                nav ul li {
+                    margin: 0 15px;
+                }
+
+                    nav ul li a {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+            .search-bar input {
+                padding: 5px;
+                font-size: 14px;
+            }
+
+            .search-bar button {
+                padding: 5px 10px;
+                margin-left: 5px;
+                background-color: #d6e3bc;
+                border: none;
+                cursor: pointer;
+            }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .login-form {
+            width: 60%;
+        }
+
+            .login-form h2 {
+                margin-bottom: 20px;
+            }
+
+            .login-form form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .login-form label {
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            .login-form input[type="text"],
+            .login-form input[type="password"] {
+                margin-bottom: 15px;
+                padding: 10px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .login-form input[type="checkbox"] {
+                margin-bottom: 15px;
+            }
+
+            .login-form .error {
+                border: 1px solid red;
+            }
+
+            .login-form .error-message {
+                color: red;
+                font-size: 12px;
+            }
+
+            .login-form .valid-message {
+                color: green;
+                font-size: 12px;
+            }
+
+            .login-form button {
+                padding: 10px;
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+                .login-form button:hover {
+                    background-color: #45a049;
+                }
+
+        
+
+        
+    </style>
+
+</head>
+<body>
+
+
+    <main>
+        <div class="login-form">
+            <h2>ĐĂNG NHẬP</h2>
+            <form action="login.php" method="POST">
+                <label for="username">UserName</label>
+                <input type="text" id="username" name="username" class="error" placeholder="Enter your username" required>
+                <span class="error-message">Must to enter your username</span>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="valid-message" placeholder="**********" required>
+                <span class="valid-message">Password include special character!</span>
+
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember Password</label>
+
+                <button type="submit">ĐĂNG NHẬP</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
+
+
+
+
+
+
+

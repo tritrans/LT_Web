@@ -1,0 +1,17 @@
+﻿@model tuan03.Models.information01
+@{
+    ViewBag.Title = "MH_xacnhan";
+}
+
+@Session
+@{var info = Session["info"] as tuan03.Models.information01;}
+@if (info != null)
+{
+    <p>Your FullName is : @info.fullname</p>
+    <p>Your ID Student is : @info.idstuident</p>
+    <p>Your Email is : @info.email</p>
+    <p>Your Photo is : @info.fileimage</p>
+    <p>Your Note is : @info.note</p>
+    
+}
+<h2>mh page h</h2>

@@ -1,0 +1,178 @@
+﻿
+@{
+    ViewBag.Title = "dangky";
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+}
+
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title> View Đăng Nhập</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+        header {
+            background-color: #d6e3bc;
+            padding: 10px 0;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info p {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        nav {
+            background-color: #a2c373;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+                nav ul li {
+                    margin: 0 15px;
+                }
+
+                    nav ul li a {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+            .search-bar input {
+                padding: 5px;
+                font-size: 14px;
+            }
+
+            .search-bar button {
+                padding: 5px 10px;
+                margin-left: 5px;
+                background-color: #d6e3bc;
+                border: none;
+                cursor: pointer;
+            }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .registration-form {
+            width: 60%;
+        }
+
+            .registration-form h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .registration-form form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .registration-form label {
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            .registration-form input,
+            .registration-form select {
+                margin-bottom: 15px;
+                padding: 10px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .registration-form .gender {
+                display: flex;
+                gap: 20px;
+            }
+
+            .registration-form button {
+                padding: 10px;
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+                .registration-form button:hover {
+                    background-color: #45a049;
+                }
+    </style>
+
+</head>
+<body>
+
+
+    <main>
+        <div class="registration-form">
+            <h2>Đăng Ký Tài Khoản</h2>
+            <form action="register.php" method="POST">
+                <label for="name">Tên khách hàng</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Địa chỉ Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email Address" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <label>Giới tính</label>
+                <div class="gender">
+                    <input type="radio" id="male" name="gender" value="Nam">
+                    <label for="male">Nam</label>
+                    <input type="radio" id="female" name="gender" value="Nữ">
+                    <label for="female">Nữ</label>
+                    <input type="radio" id="other" name="gender" value="Khác">
+                    <label for="other">Khác</label>
+                </div>
+
+                <label for="occupation">Nghề nghiệp</label>
+                <select id="occupation" name="occupation">
+                    <option value="Giáo viên">Giáo viên</option>
+                    <!-- Add other options here -->
+                </select>
+
+                <button type="submit">ĐĂNG KÝ</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

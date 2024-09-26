@@ -1,0 +1,117 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title</title>
+
+    <!--Bootstrap 4-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div id="Wrapper" class="container">
+        <br />
+        <div id="header" class="row bg-light">
+            <div class="col-xs-12 col-md-4">
+                <br />
+                <img src="/Anh/LogoHoa24h.jpg" width="100%" />
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <b>Hà Nội:</b><br />
+                Điện thoại: 024.73007.008 - 093.4647.172<br />
+                Địa chỉ: Số 63/445 Lạc Long Quân, Tây Hồ, Hà Nội<br />
+                Email: hn@dienhoa24gio.com
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <b>TP.Hồ Chí Minh:</b><br />
+                Điện thoại: 028.73007.008 - 094.7723.444<br />
+                Địa chỉ: 189 XVN Tĩnh, P.17, Q. Bình Thạnh<br />
+                Email: hcm@dienhoa24gio.com
+            </div>
+        </div>
+        <div id="menu" style="background-color:yellowgreen;">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="~/Anh/HomeLogo.jpg" width="70" class="rounded" /></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggler navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                            <li class="nav-item nav-link active">
+                                @Html.ActionLink("Trang chủ", "sanPham", "Home")
+
+                            </li>
+                            <li class="nav-item nav-link">
+                                @*<a class="nav-link" href="/Views/Home/dangky.cshtml">Đăng ký </a>*@
+                                @Html.ActionLink("Đăng ký", "dangky", "Home")
+                            </li>
+                            <li class="nav-item nav-link">
+                                @Html.ActionLink("Đăng nhập", "dangnhap", "Home")
+                            </li>
+                            <li class="nav-item nav-link">
+                                @Html.ActionLink("Liên hệ", "lienhe", "Home")
+                            </li>
+                        </ul>
+                        <input class="form-control mr-2 w-25" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <br />
+        <div id="Content" class="row">
+            <div class="col-xs-12 col-md-9">
+                <!-- Sản Phẩm tiêu biểu-->
+                @RenderBody()
+            </div>
+            <!--SideBar-->
+            <div class="col-xs-12 col-md-3">
+                <ul class="list-group list-group-flush text-left bg-light">
+                    <li class="list-group-item" style="background-color:yellowgreen"><a href="#" style="text-transform:uppercase; text-decoration:none; color:white; font-weight:bold;">Hoa theo chủ đề</a></li>
+                    <li class="list-group-item bg-light"><a href="#" style="text-transform:uppercase; text-decoration:none;">Hoa Sinh nhật</a></li>
+                    <li class="list-group-item bg-light"><a href="#" style="text-transform:uppercase; text-decoration:none;">Hoa khai trương</a></li>
+                    <li class="list-group-item bg-light"><a href="#" style="text-transform:uppercase; text-decoration:none;">Lan hồ điệp</a></li>
+                    <li class="list-group-item bg-light"><a href="#" style="text-transform:uppercase; text-decoration:none;">Hoa cưới</a></li>
+                    <li class="list-group-item bg-light"><a href="#" style="text-transform:uppercase; text-decoration:none;">Hoa Lan</a></li>
+                    <li class="list-group-item bg-light"><a href="#" style="text-transform:uppercase; text-decoration:none;">Hoa chia buồn</a></li>
+                    <li class="list-group-item bg-light"><a href="#" style="text-transform:uppercase; text-decoration:none;">Quà tặng</a></li>
+                    <li class="list-group-item bg-light"><a href="#" style="text-transform:uppercase; text-decoration:none;">Trái cây</a></li>
+                </ul>
+
+
+                <ul class="list-group list-group-flush text-left bg-light">
+                    <li class="list-group-item" style="background-color:yellowgreen;"><a href="#" style="text-transform:uppercase; text-decoration:none; color:white; font-weight:bold;">Chọn theo giá</a></li>
+                    <li class="list-group-item bg-light"><a href="#" style="text-decoration:none;">250,000đ trở xuống</a></li>
+                    <li class="list-group-item bg-light"><a href="#" style="text-decoration:none;">250,000đ - 400,000đ</a></li>
+                    <li class="list-group-item bg-light"><a href="#" style="text-decoration:none;">400,000đ - 600,000đ</a></li>
+                    <li class="list-group-item bg-light"><a href="#" style="text-decoration:none;">600,000đ - 900,000đ</a></li>
+                    <li class="list-group-item bg-light"><a href="#" style="text-decoration:none;">Trên 1,000,000đ</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+        <div id="Footer" class="row" style="background-color:yellowgreen;">
+            <div class="col text-light mt-3 mb-3" style="text-align:center;">
+                Liên hệ: Khoa Công nghệ Thông tin - Trường Đại học Công nghiệp Thực phẩm Tp.HCM Link: fanpage và link: youtube <br />
+                Địa chỉ: 140 Lê Trọng Tấn, Phường Tây Thạnh, Quận Tân Phú, Tp.HCM. ĐT: (028).38161673 (ext 136) Mail: kcntt@hufi.edu.vn
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
